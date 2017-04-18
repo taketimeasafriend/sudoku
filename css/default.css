@@ -1,0 +1,70 @@
+body
+{
+	font-size: 0.9em;
+	font-family: verdana, arial, sans-serif;
+	background-color: #FAEBD7;
+}
+button
+{
+	width: 90px;
+	margin-top: 8px;
+}
+canvas
+{
+background-color: #fffff0;
+padding-bottom:10px;
+display:block;
+}
+#sudoku
+{
+margin-left:auto;
+margin-right:auto;
+width: 945px;
+height:900px;
+background-color: #fefefe;
+padding:10px;
+}
+#banner
+{
+position: relative;
+left: 0px;
+top:0px;
+padding: 10px;
+}
+#help
+{
+top:60px;
+font-size: 10px;
+width: 220px;
+float: right;
+}
+#main
+{
+top:60px;
+padding: 10px;
+float:left;
+}
+#big
+{
+font-size: 32px;
+color:#448844;
+}
+#small
+{
+display:block;
+font-size: 10px;
+}
+#help li
+{
+padding-bottom: 6px;
+}
+h2
+{
+color: #444444;
+text-align:center;
+}
+td.help li
+{
+padding-bottom: 6px;
+font-size: 0.7em;
+}
