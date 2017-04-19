@@ -44,8 +44,10 @@ canvas {
     color: #ffffff;
     font-family: Arial;
     font-size: 14px;
-    padding: 10px;
+    padding: 12px;
     text-decoration: none;
+    width: 150px;
+    line-height: 14px;
 }
 
 .myButton:hover {
