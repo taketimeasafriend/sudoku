@@ -110,7 +110,7 @@
 				function checkStatus() {
 					extraInfo.innerHTML = "";
 					if (!board1._isValid)
-						message.innerHTML = "*Invalid*";
+						message.innerHTML = "输入有误";
 					else if (board1._isSolved)
 						message.innerHTML = "答题完毕";
 					else
@@ -302,7 +302,7 @@
 					var ret = board1.setString(tbSerial.value);
 					updateUI();
 					if (!ret)
-						message.innerHTML = "String is not of length 81";
+						message.innerHTML = "不是81个数字";
 				}
 
 				function clearGame() {
@@ -342,7 +342,7 @@
 					board1.trySolve(Location.empty, 0);
 					var diff = new Date().getTime() - s;
 					updateUI();
-					extraInfo.innerHTML = "解题耗时:" + String(diff) + "milliseconds";
+					extraInfo.innerHTML = "解题耗时:" + String(diff) + "毫秒";
 				}
 
 				//http://magictour.free.fr/sudoku.htm for list of hard Sudoku puzzles
