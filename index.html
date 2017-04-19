@@ -16,7 +16,7 @@
 <body>
 	<!--页头-->
 	<div class="head">
-		sudoku | 数独在线求解器
+		<i class="fa fa-sort-numeric-asc" aria-hidden="true"></i> sudoku | 数独在线求解器
 	</div>
 
 	<div id='sudoku'>
@@ -27,38 +27,46 @@
 			<table>
 				<tr>
 					<td>
-						<canvas id='canvas2' width='541' height='55' title="Click here to set the currently selected digit">Canvas is not supported by this browser.</canvas>
+						<br/>
 						<canvas id='canvas1' width='541' height='541'>Canvas is not supported by this browser.</canvas>
-						<input id='tbSerial' style='width: 538px; background-color: #faf0e6; margin-top: 10px;' />
-						<br/><br/>
-						<span id="extraInfo" style='font-size:0.7em; color: #696969;'></span><br/>
+						点击输入:
+						<canvas id='canvas2' width='541' height='55' title="Click here to set the currently selected digit">Canvas is not supported by this browser.</canvas>
+						数独框对应数字文本:
+						<input id='tbSerial' style='width: 538px; background-color: #eee; margin-top: 5px;' />
+						<br/>
 					</td>
 					<td style="width: 135px">
-						<button onclick="clearGame()" title='Clears all cells including givens. Use this initially when entering a new problem.'>Clear</button><br/>
-						<button onclick="loadText()" title='Loads the digits from the textbox below the board in order left to right, top to bottom. Click this after entering a problem to convert them to givens'>Load</button><br/>
-						<button id="btnReset" onclick="reset()" title='Clears all user entered cells. The givens are NOT cleared.'>Reset</button><br/>
-						<button id="btnAccept" onclick="acceptPossibles()" title='Makes all singles into values'>Accept</button><br/>
-						<button id="btnHint" onclick="hint()" title='Enters the answer to the currently selected cell'>Hint</button><br/>
-						<button id="btnUndo" onclick="undo()" title='Undoes the last user action except load, clear and reset'>Undo</button><br/>
-						<button id="btnSolve" onclick="solve()" title='If possible, it will solve the problem. The amount of time taken to solve is displayed below.'>Solve</button><br/><br/> Show allowed: <input id='chbAllowed' type="checkbox" checked='yes' title='Untick this to hide allowed values'
-						/><br/> Show singles: <input id='chbShowSingles' type="checkbox" checked='yes' title='Untick this to hide naked and hidden singles - these are shown in red' /><br/>
-						<span id="message" style="width: 130; color: Red; "></span><br/>
-
+						<button onclick="clearGame()" title='清空所有数据(用于新建题目时初始化)'>清空所有</button><br/>
+						<button onclick="loadText()" title='Loads the digits from the textbox below the board in order left to right, top to bottom. Click this after entering a problem to convert them to givens'>载入</button><br/>
+						<button id="btnReset" onclick="reset()" title='清空用户输入的数字(题目不被清空)'>重新答题</button><br/>
+						<button id="btnAccept" onclick="acceptPossibles()" title='填入小的红色提示数字'>填入红色提示数字</button><br/>
+						<button id="btnHint" onclick="hint()" title='填入当前选定单元格(浅红色背景)的正确答案'>解答已选定单元格</button><br/>
+						<button id="btnUndo" onclick="undo()" title='重做上一步(不包括“清空所有”“重新答题”)'>上一步</button><br/>
+						<button id="btnSolve" onclick="solve()" title='显示正确答案(如果题目有解)(程序耗时将显示在最下方)'>看答案</button><br/><br/>
+						<input id='chbAllowed' type="checkbox" checked='yes' title='每个单元格显示的小数字即为允许数字'/>
+						显示允许数字
+						<br/><input id='chbShowSingles' type="checkbox" checked='yes' title='每个单元格标示为红色的小数字即为唯一允许的数字' />
+						标示唯一数字
+						<br/>
+						<div class="messageout">
+							<div id="message" style="margin-top: 50px; width: 120; color: Red;"></div><br/>
+							<div id="extraInfo" style='font-size:0.8em; color: #696969;'></div>
+						</div>
 					</td>
 					<td class="help">
-						<h2>Instructions</h2>
+						<h2>🔘按钮说明</h2>
 						<ul>
-							<li>Hit the Clear button and enter the Sudoku 'givens' manually. You can do this by clicking on a cell, or use the keyboard arrow keys, then type the digit from '1' to '9'. The Delete key or the '0' key will clear a cell. You can also enter a digit
-								or clear it by clicking in the row of digits above the board.</li>
-							<li>When you are finished hit the Load button. The givens will now appear in blue.</li>
-							<li>Hitting the Reset button will now undo all changes and take you back to the original givens.</li>
-							<li>The allowed digits are shown as a small light gray digit in the background of each cell. You can turn this off by unticking the 'Show allowed' option.</li>
-							<li>If an allowed digit is the only possible digit (these are called singles) then it is highlighted in red. You can turn this off by unticking the 'Show singles' option.</li>
-							<li>Hitting the Accept button will convert singles to actual entered digits.</li>
-							<li>The Hint button will fill in the current selected cell with the correct digit.</li>
-							<li>Clicking in a cell with a digit entered will highlight the same digit anywhere alse in red.</li>
-							<li>Solve of course will solve the entire puzzle.</li>
-							<li>Undo will undo the last user action such as entering a digit or htting the Accept button.</li>
+							<li>“清空所有” - 清空所有数据，用于新建题目时初始化(程序默认给了一道题目)。可以鼠标点击界面单元格输入，或者用键盘方向键配合输入 1 - 9。</li>
+							<li>“载入” - 已经填入的数字将被固定（蓝色标示），点击“重新答题”时数字不会被清空。</li>
+							<li>“重新答题” - 清空用户输入的数字。(题目不被清空)</li>
+							<li>“填入红色提示数字” - 填入小的红色提示数字。</li>
+							<li>“解答已选定单元格” - 填入当前选定单元格(浅红色背景)的正确答案。</li>
+							<li>“上一步” - 重做上一步(不包括“清空所有”和“重新答题”)</li>
+							<li>“看答案” - 显示正确答案(如果题目有解)，程序耗时将显示在最下方。此步可撤销。</li>
+							<li>每个单元格允许填入的数字将以小号灰色标示出。（可勾选是否“显示允许数字”）</li>
+							<li>当每个单元格被允许填入的数字唯一，那么这个数字将红色高亮标示。（可勾选是否“标示唯一数字”）</li>
+							<li>PS: 点击已经输入数字的单元格，所有和此单元格数字相同的单元格都会红色高亮。</li>
+
 						</ul>
 					</td>
 				</tr>
@@ -103,7 +111,7 @@
 					if (!board1._isValid)
 						message.innerHTML = "*Invalid*";
 					else if (board1._isSolved)
-						message.innerHTML = "*Solved*";
+						message.innerHTML = "答题完毕";
 					else
 						message.innerHTML = "";
 				}
@@ -111,7 +119,7 @@
 				function drawGrid() {
 					// Only ever called once!
 					var context = canvas1.getContext('2d');
-					context.strokeStyle = '#808080';
+					context.strokeStyle = '#c00';
 					for (var i = 0; i <= BoardSize; i++) {
 						context.beginPath();
 						var thick = i % 3 == 0;
@@ -250,7 +258,7 @@
 					if (cell.isGiven())
 						return;
 					if (digit != 0 && !cell.isAllowed(digit)) {
-						message.innerHTML = "Digit not allowed";
+						message.innerHTML = "输入有误";
 						return;
 					}
 					pushBoard();
@@ -333,7 +341,7 @@
 					board1.trySolve(Location.empty, 0);
 					var diff = new Date().getTime() - s;
 					updateUI();
-					extraInfo.innerHTML = "Solve took " + String(diff) + " milliseconds";
+					extraInfo.innerHTML = "解题耗时:" + String(diff) + "milliseconds";
 				}
 
 				//http://magictour.free.fr/sudoku.htm for list of hard Sudoku puzzles
@@ -347,7 +355,7 @@
 				function initDigitSource() {
 					// Only ever called once!
 					var context = canvas2.getContext('2d');
-					context.strokeStyle = '#808080';
+					context.strokeStyle = '#070';
 					var SourceSize = BoardSize + 1;
 					for (var i = 0; i <= SourceSize; i++) {
 						context.beginPath();
@@ -373,7 +381,7 @@
 					for (var col = 0; col < SourceSize; col++) {
 						var x = (col + 0.5) * digCellSize; // center of cell for textAlign center, textBaseline middle
 						var y = 0.5 * digCellSize;
-						var value = col < 9 ? col + 1 : "Del";
+						var value = col < 9 ? col + 1 : "X";
 						context.fillStyle = normalForeColor; // show "givens" in a darker color
 						context.fillText(value, x, y);
 					}

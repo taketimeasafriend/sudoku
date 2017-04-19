@@ -2,15 +2,17 @@ body {
     font-size: 0.9em;
     font-family: verdana, arial, sans-serif;
     background-color: #000;
+    margin: auto;
 }
 
 button {
-    width: 90px;
+    width: 120px;
+    height: 20px;
     margin-top: 8px;
 }
 
 canvas {
-    background-color: #fffff0;
+    background-color: #fff;
     padding-bottom: 10px;
     display: block;
 }
@@ -20,8 +22,9 @@ canvas {
     margin-right: auto;
     width: 945px;
     height: 900px;
-    background-color: #fefefe;
+    background-color: #fff;
     padding: 10px;
+    border-radius: 12px;
 }
 
 .banner {
@@ -45,6 +48,11 @@ canvas {
 .myButton:hover {
     background-color: #44c767;
     font-size: 15px;
+}
+
+.messageout {
+    margin-top: 20px;
+    text-align: center;
 }
 
 #help {
@@ -71,5 +79,5 @@ h2 {
 
 td.help li {
     padding-bottom: 6px;
-    font-size: 0.7em;
+    font-size: 0.8em;
 }
