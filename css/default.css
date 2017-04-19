@@ -6,9 +6,12 @@ body {
 }
 
 button {
-    width: 120px;
-    height: 20px;
-    margin-top: 8px;
+    width: 130px;
+    height: 30px;
+    margin: 10px 30px 0px 30px;
+    border-radius: 5px;
+    background-color: #eee;
+    font-size: 0.9em;
 }
 
 canvas {
@@ -75,6 +78,10 @@ canvas {
 h2 {
     color: #444444;
     text-align: center;
+}
+
+td.help {
+    border-left: 1px dashed #000;
 }
 
 td.help li {

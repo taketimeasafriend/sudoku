@@ -17,3 +17,15 @@
     margin: 5px;
     color: #ccc;
 }
+.text404 {
+    width: 500px;
+    margin: auto;
+    padding-top: 50px;
+    text-align: center;
+    color: #eee;
+}
+.blockquote-center {
+    padding: 1.0em;
+    border: 3px solid #eee;
+    border-radius: 6px;
+}

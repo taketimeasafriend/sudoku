@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="zh">
+
+<head>
+	<meta charset="UTF-8">
+	<title>时间的朋友|数独</title>
+	<link href="images/favicon_books.ico" rel="shortcut icon">
+	<link href="css/head.css" type="text/css" rel="stylesheet">
+	<link href="css/default.css" type="text/css" rel="stylesheet">
+	<link href="css/foot.css" type="text/css" rel="stylesheet">
+	<link href="css/font-awesome.min.css" rel="stylesheet">
+	<link href="css/clock.css" rel="stylesheet">
+	<script src="js/jquery.js?v=1.83.min" type="text/javascript"></script>
+	<script src="js/clock.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+	<!--页头-->
+	<div class="head">
+		<i class="fa fa-sort-numeric-asc" aria-hidden="true"></i> sudoku | 数独在线求解器
+	</div>
+
+	<!--404text-->
+	<div class="text404">
+		<h1>- 404 Not Found -</h1>
+		<p>迷路了吗？你访问的页面不在地球上。</p>
+		<blockquote class="blockquote-center"><strong>“ 成功人士将受益于错误，并尝试其他途径。”</strong></blockquote>
+	</div>
+	<br>
+	<!--clock-->
+	<div class="box" id="clock">
+		<!-- 原点 -->
+		<div class="origin"></div>
+		<!-- 时钟数 -->
+		<div class="dot_box">
+			<div class="dot">6</div>
+			<div class="dot">5</div>
+			<div class="dot">4</div>
+			<div class="dot">3</div>
+			<div class="dot">2</div>
+			<div class="dot">1</div>
+			<div class="dot">12</div>
+			<div class="dot">11</div>
+			<div class="dot">10</div>
+			<div class="dot">9</div>
+			<div class="dot">8</div>
+			<div class="dot">7</div>
+		</div>
+		<!-- 时、分、秒针 -->
+		<div class="clock_line hour_line" id="hour_line"></div>
+		<div class="clock_line minute_line" id="minute_line"></div>
+		<div class="clock_line second_line" id="second_line"></div>
+		<!-- 日期 -->
+		<div class="date_info" id="date_info"></div>
+		<!-- 时间 -->
+		<div class="time_info">
+			<div class="time" id="hour_time"></div>
+			<div class="time" id="minute_time"></div>
+			<div class="time" id="second_time"></div>
+		</div>
+	</div>
+
+	<!--页脚-->
+	<div class="foot">
+		<a href="https://github.com/taketimeasafriend" target="view_window"><i class="fa fa-github"></i>Github</a> -
+		<a href="http://weibo.com/miaoxiaogege" target="view_window"><i class="fa fa-weibo"></i>微博</a> -
+		<a href="http://ogudt6aal.bkt.clouddn.com/image/whynotwangwei.jpeg" target="view_window"><i class="fa fa-weixin"></i>微信</a> -
+		<a href="mailto:taketimeasafriend@gmail.com?subject=I%20want%20to%20say%20&body=Hello%20"><i class="fa fa-envelope"></i>邮箱</a>
+	</div>
+</body>
+
+</html>

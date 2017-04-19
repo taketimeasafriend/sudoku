@@ -32,7 +32,7 @@
 						点击输入:
 						<canvas id='canvas2' width='541' height='55' title="Click here to set the currently selected digit">Canvas is not supported by this browser.</canvas>
 						数独框对应数字文本:
-						<input id='tbSerial' style='width: 538px; background-color: #eee; margin-top: 5px;' />
+						<input id='tbSerial' style='width: 538px; background-color: #eee; margin-top: 5px; font-size: 1.0em;' />
 						<br/>
 					</td>
 					<td style="width: 135px">
@@ -42,15 +42,15 @@
 						<button id="btnAccept" onclick="acceptPossibles()" title='填入小的红色提示数字'>填入红色提示数字</button><br/>
 						<button id="btnHint" onclick="hint()" title='填入当前选定单元格(浅红色背景)的正确答案'>解答已选定单元格</button><br/>
 						<button id="btnUndo" onclick="undo()" title='重做上一步(不包括“清空所有”“重新答题”)'>上一步</button><br/>
-						<button id="btnSolve" onclick="solve()" title='显示正确答案(如果题目有解)(程序耗时将显示在最下方)'>看答案</button><br/><br/>
+						<button id="btnSolve" onclick="solve()" title='显示正确答案(如果题目有解)(程序耗时将显示在最下方)'>看答案</button><br/>
+						<div class="messageout">
 						<input id='chbAllowed' type="checkbox" checked='yes' title='每个单元格显示的小数字即为允许数字'/>
 						显示允许数字
 						<br/><input id='chbShowSingles' type="checkbox" checked='yes' title='每个单元格标示为红色的小数字即为唯一允许的数字' />
 						标示唯一数字
 						<br/>
-						<div class="messageout">
-							<div id="message" style="margin-top: 50px; width: 120; color: Red;"></div><br/>
-							<div id="extraInfo" style='font-size:0.8em; color: #696969;'></div>
+						<div id="message" style="margin-top: 50px; width: 120; color: Red;"></div><br/>
+						<div id="extraInfo" style='font-size:0.8em; color: #696969;'></div>
 						</div>
 					</td>
 					<td class="help">
