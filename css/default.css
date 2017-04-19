@@ -24,13 +24,27 @@ canvas {
     padding: 10px;
 }
 
-#banner {
-    position: relative;
-		margin-bottom: 20px;
-    left: 0px;
-    top: 0px;
+.banner {
+    text-align: center;
+}
+
+.myButton {
+    background-color: #222;
+    -moz-border-radius: 28px;
+    -webkit-border-radius: 28px;
+    border-radius: 12px;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 14px;
     padding: 10px;
-		text-align: center;
+    text-decoration: none;
+}
+
+.myButton:hover {
+    background-color: #44c767;
+    font-size: 15px;
 }
 
 #help {
@@ -44,16 +58,6 @@ canvas {
     top: 60px;
     padding: 10px;
     float: left;
-}
-
-#big {
-    font-size: 32px;
-    color: #448844;
-}
-
-#small {
-    display: block;
-    font-size: 14px;
 }
 
 #help li {
